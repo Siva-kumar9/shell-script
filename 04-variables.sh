@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PERSON1=Honey
-PERSON2=Bunny
+PERSON1=$1
+PERSON2=$2
 
 echo "$PERSON1: Hi ra $PERSON2"
 echo "$PERSON2: Hi ra Fine u"
