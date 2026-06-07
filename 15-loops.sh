@@ -32,7 +32,7 @@ VALIDATE(){
 }
 
 
-echo "The Time is : $TIMESTAMP" &>> $LOG_FILE_NAME
+echo "The Time is :  $R $TIMESTAMP" &>> $LOG_FILE_NAME
 
 for package in $@
 do
