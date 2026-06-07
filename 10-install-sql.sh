@@ -2,7 +2,7 @@
 
 USRID=$(id -u)
 
-if [ $USRID -ne 0]
+if [ $USRID -ne 0 ]
 then
     echo "Not a Root User"
     exit 1
