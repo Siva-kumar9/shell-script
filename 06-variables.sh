@@ -3,9 +3,9 @@
 N1=$1
 N2=$2
 
-TIMESTAMP=$(data)
+TIMES=$(date)
 
-echo "Time is : $TIMESTAMP"
+echo "Time is : $TIMES"
 
 SUM=$(($N1+$N2))
 
