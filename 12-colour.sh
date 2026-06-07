@@ -2,6 +2,12 @@
 
 USRID=$(id -u)
 
+if [ $USRID -ne 0 ]
+then
+    echo -e " $R Not a Root User"
+    exit 1
+fi
+
 
 R="\e[31m"
 G="\e[32m"
@@ -18,11 +24,7 @@ VALIDATE(){
     fi
 }
 
-if [ $USRID -ne 0 ]
-then
-    echo -e " $R Not a Root User"
-    exit 1
-fi
+
 
 dnf list installed mysql
 
