@@ -32,7 +32,7 @@ VALIDATE(){
 }
 
 
-echo "The Time is :  $R $TIMESTAMP" &>> $LOG_FILE_NAME
+echo -e "The Time is :  $R $TIMESTAMP" &>> $LOG_FILE_NAME
 
 for package in $@
 do
@@ -40,8 +40,8 @@ do
     if [ $? -ne 0 ]
     then
         dnf install $package -y &>>LOG_FILE_NAME
-        VALIDATE $? "$package is $Y installing"
+        VALIDATE $? "$package is installing"
     else
-        echo "Already $package is "$G" Installed $N"
+        echo -e "Already $package is $Y .... Installed $N "
     fi
 done
