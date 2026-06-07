@@ -36,10 +36,10 @@ echo -e "The Time is :  $R $TIMESTAMP" &>> $LOG_FILE_NAME
 
 for package in $@
 do
-    dnf list installed $package &>>LOG_FILE_NAME
+    dnf list installed $package &>>$LOG_FILE_NAME
     if [ $? -ne 0 ]
     then
-        dnf install $package -y &>>LOG_FILE_NAME
+        dnf install $package -y &>>$LOG_FILE_NAME
         VALIDATE $? "$package is installing"
     else
         echo -e "Already $package is $Y .... Installed $N "
