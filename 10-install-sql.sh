@@ -23,3 +23,19 @@ then
 else
     echo "Already Installed"
 fi
+
+dnf list installed git
+
+if [ $? -ne 0 ]
+then
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "fail"
+        exit 1
+    else
+        echo "success"
+    fi
+else
+    echo "already installed"
+fi
