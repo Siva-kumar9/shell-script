@@ -2,11 +2,13 @@
 
 USRID=$(id -u)
 
-if [ $USRID -ne 0 ]
-then
+CHECKROOT(){
+    if [ $USRID -ne 0 ]
+    then
     echo -e " $R Not a Root User"
     exit 1
-fi
+    fi
+}
 
 
 LOG_FOLDER="/var/log/shellscript-logs"
@@ -32,7 +34,11 @@ VALIDATE(){
 }
 
 
+
+
 echo -e "The Time is :  $R $TIMESTAMP" &>> $LOG_FILE_NAME
+
+CHECKROOT
 
 for package in $@
 do
