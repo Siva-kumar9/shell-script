@@ -32,7 +32,7 @@ USAGE(){
     exit 1
 }
 
-if [$# -ne 0 ]
+if [$# -lt 2 ]
 then
     USAGE
 fi
