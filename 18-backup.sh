@@ -36,3 +36,17 @@ if [ $# -lt 2 ]
 then
     USAGE
 fi
+
+
+if [ ! -d $SOURCE_DIR ]
+then
+    echo -e "$SOURCE_DIR  $R Doesn't exit ... $N Please Check"
+    exit 1
+fi
+
+
+if [ ! -d $DESTINATION_DIR ]
+then
+    echo -e "$DESTINATION_DIR  $R Doesn't exit ... $N Please Check"
+    exit 1
+fi
