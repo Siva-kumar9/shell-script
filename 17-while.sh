@@ -1,7 +1,8 @@
 #?/bin/bash
 
-while read -r file
+while read -r filepath
 do
-    echo "Deleting Files"
-    rm -rf $file
+    echo "Deleting Files:: $filepath"
+    rm -rf $filepath
+    echo "Deleted Files:: $filepath"
 done <<< $FILES_TO_DELETE

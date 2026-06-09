@@ -58,6 +58,17 @@ then
     echo "Files are :: $FILE"
     ZIP_FILE="$DESTINATION_DIR/app-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+    if [ -f "$ZIP_FILE" ]
+    {
+        then
+        echo -e "Successfully Created Zip files for older than $DAYS"
+        while read -r filepath #here filepath is variable name. u can give any name
+        do
+            echo "Deleting files.. $filepath"
+            rm -rf $filepath
+            echo "Deleted Files are :: $filepath"
+        done <<< $FILE
+    }
 else
     echo "Files Olders than $DAYS Not Found...."
 fi
