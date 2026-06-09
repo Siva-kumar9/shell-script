@@ -60,7 +60,7 @@ then
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
     if [ -f "$ZIP_FILE" ]
     {
-        then
+    then
         echo -e "Successfully Created Zip files for older than $DAYS"
         while read -r filepath #here filepath is variable name. u can give any name
         do
