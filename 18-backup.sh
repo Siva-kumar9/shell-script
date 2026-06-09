@@ -53,4 +53,4 @@ fi
 
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-echo "Files are :: $FILES"
+echo "Files are :: $FILE"
