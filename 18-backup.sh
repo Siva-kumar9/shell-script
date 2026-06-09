@@ -53,4 +53,9 @@ fi
 
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-echo "Files are :: $FILE"
+if[ -n "$FILE" ]
+then
+    echo "Files are :: $FILE"
+else
+    echo "Files Olders than $DAYS Not Found...."
+fi
