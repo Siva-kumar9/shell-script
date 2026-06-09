@@ -50,3 +50,7 @@ then
     echo -e "$DESTINATION_DIR  $R Doesn't exit ... $N Please Check"
     exit 1
 fi
+
+FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+
+echo "Files are :: $FILES"
